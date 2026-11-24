@@ -1,0 +1,129 @@
+@charset "UTF8";
+
+body {
+    background-color: #8080ff;
+    font-size: 16px;
+}
+
+#documento{
+    margin: 0 auto;
+    background-color: cyan;
+    width: 1000px;
+}
+#cabecera{
+    background-color: #14e737;
+    padding: 5px;
+}
+#cabecera #logo{
+    width: 75px;
+    height: 50px;
+}
+
+#cabecera #titulo{
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+.boton{
+    background-color: blue;
+    color:white;
+    border:thin black solid;
+}
+
+.boton a{
+    text-decoration: none;
+    color:white;
+}
+
+.boton a:visited{
+    text-decoration: none;
+    color:white;
+}
+
+.boton a:hover{
+    background-color:#ff9800;
+    color: black;
+}
+
+.boton:hover{
+    background-color:#ff9800;
+    color: black;
+}
+
+.tabla{
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    background-color: white;
+}
+
+.tabla th{
+    background-color: teal;
+    color: blue;
+}
+.tabla tr.par{
+    background-color: black;
+    color: white;
+    
+}
+
+.tabla tr.impar{
+    
+}
+
+#pie{
+    background-color: #81e714;
+    color: blue;
+    font-size: 1.5 em;
+    padding: 5px;
+}
+
+.for_texto{
+    border:blue thin solid;
+    background-color: white;
+    padding: 2px;
+    margin:2px;
+    border-radius: 4px;
+}
+.error{
+    background-color: white;
+    color:red;
+    border:thin solid red;
+    padding:5px;
+}
+
+
+.barraUbicacion{
+    background-color: #14e737;
+}
+
+header{
+    display: flex;
+}
+
+.titulo{
+    display: block;
+    margin-left: 20%;
+}
+
+img{
+    display: block;
+    width: 75px;
+    height: 75px;
+    margin: 10% 20% 0% 10%;
+}
+
+.mi-boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #199319;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 1.5%;
+}
+
+.mi-boton:hover {
+  background-color: #223094;
+}
