@@ -58,8 +58,8 @@ const COLORESFONDO = [
  * @return array
  */
 function dameColoresPersonalizados():array{
-    $fondo = $_COOKIE["color fondo"] ?? "white";
-    $texto = $_COOKIE["color texto"] ?? "black";
+    $fondo = $_COOKIE["color_fondo"] ?? "white";
+    $texto = $_COOKIE["color_texto"] ?? "black";
     if(!is_string($fondo) || !array_key_exists($fondo, COLORESFONDO))
         $fondo = "white";
     if(!is_string($texto) || !array_key_exists($texto, COLORESTEXTO))
@@ -74,6 +74,6 @@ function dameColoresPersonalizados():array{
  */
 function estiloPersonalizado():string {
     $c = dameColoresPersonalizados();
-    return "<style>#documento{background-color: }". COLORESFONDO[$c["fondo"]["css"]].
-            "; color: ". COLORESTEXTO[$c["texto"]["css"]];
+    return "<style>#documento { background-color: " . COLORESFONDO[$c["fondo"]]["css"]
+        . "; color: " . COLORESTEXTO[$c["texto"]]["css"] . "; padding: 10px; }</style>";
 }

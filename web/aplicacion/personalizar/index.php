@@ -35,10 +35,14 @@ function cabecera() {}
 function cuerpo($accesos)
 {
 ?>
-    <a href="personalizar.php">Personalizar fondo</a>
 
     <br>
     <br>
-    
+    <a href="personalizar.php">Personalizar fondo</a>
+    <div id="documento">
+        <h2>Pagina de informacion</h2>
+        <p>Aqui se muestra los colores que se haya configurado</p>
+        <p>Se ha accedido a esta pagina <?php $accesos ?> veces</p>
+    </div>
 <?php
 }

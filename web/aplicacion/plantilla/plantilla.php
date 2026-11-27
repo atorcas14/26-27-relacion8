@@ -46,6 +46,7 @@ function finCabecera()
 ?>
     </head>
 <?php   
+    estiloPersonalizado();
 }
 
 function inicioCuerpo(string $cabecera, array $barraUbi=[])
