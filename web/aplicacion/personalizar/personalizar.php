@@ -21,6 +21,8 @@ $errores = [];
 $guardado = false;
 $actual = dameColoresPersonalizados();
 $datos = ["fondo" => $actual["fondo"], "texto" => $actual["texto"]];
+$fondo="";
+$texto="";
 
 if (isset($_POST["guardar"])) {
     $fondo = (isset($_POST["fondo"]) && is_string($_POST["fondo"])) ? $_POST["fondo"] : "";
@@ -43,10 +45,12 @@ if (isset($_POST["guardar"])) {
         $guardado = true;
     }
 }
+$fondo = $_COOKIE["color_fondo"]??"white";
+$texto = $_COOKIE["color_texto"]??"black";
 
 //dibuja la plantilla de la vista
 inicioCabecera("PERSONALIZAR");
-cabecera();
+cabecera($fondo,$texto);
 finCabecera();
 inicioCuerpo("Personalizar", $barra);
 cuerpo($datos, $errores, $guardado); //llamo a la vista
@@ -54,7 +58,14 @@ finCuerpo();
 // **********************************************************
 
 //vista
-function cabecera() {}
+function cabecera($fondo,$texto) {
+    ?><style>
+        #documento{
+            background-color: <?= $fondo ?>;
+            color: <?= $texto ?>
+        }
+    </style><?php
+}
 
 //Funcion que selecciona el color
 function selectColor(string $nombre, array $colores, string $seleccionado, array $errores)

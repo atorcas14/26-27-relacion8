@@ -76,7 +76,7 @@ function inicioCuerpo(string $cabecera, array $barraUbi=[])
                     <li><a href="/aplicacion/pruebas/index.php">Ejemplos Basicos</a></li>
                     
                 </ul> 
-                <a href="../personalizar/index.php" class="mi-boton">Relacion 8</a><br>
+                <a href="/web/aplicacion/personalizar/index.php" class="mi-boton">Relacion 8</a><br>
                 
             </div>
 
